@@ -18,7 +18,7 @@
 							<div id="profile-name"><?php echo esc_html( get_theme_mod('profile-name') ); ?></div>
 						<?php endif; ?>
 						<?php if ( get_theme_mod('profile-description') ): ?>
-							<div id="profile-description"><?php echo esc_html( get_theme_mod('profile-description') ); ?></div>
+							<div id="profile-description"><?php echo wp_kses_post( get_theme_mod('profile-description') ); ?></div>
 						<?php endif; ?>
 					</div>
 				</div>
