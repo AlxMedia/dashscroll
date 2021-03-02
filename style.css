@@ -1,7 +1,7 @@
 /*
 Theme Name: Dashscroll
 Theme URI: http://alx.media/themes/dashscroll/
-Version: 1.0.0
+Version: 1.0.1
 Requires at least: 5.0
 Requires PHP: 5.6
 Tested up to: 5.6
@@ -217,7 +217,7 @@ input, textarea, button, select, label { font-family: inherit; }
 /*  base : entry
 /* ------------------------------------ */
 .entry { font-size: 17px; line-height: 1.6em; }
-.entry a { color: #00a389; }
+.entry a { color: #00a389; text-decoration: underline; }
 .entry a:hover { color: #071232; }
 .entry hr { border: 0; background: #edf0f5; height: 2px; width: 30%; margin: 40px auto; }
 .entry p,
@@ -661,7 +661,7 @@ box-shadow: 0 0 2px rgba(255,255,255,0.4);
 #header { background: #fff; min-width: 320px; max-width: 320px; position: relative; z-index: 101; box-sizing: border-box; }
 .main { width: 100%; min-height: 100vh; padding: 20px 0; }
 
-.s2 { background: #fff; position: relative; min-width: 70px; max-width: 70px; z-index: 99; }
+.s2 { background: #fff; position: relative; min-width: 70px; max-width: 70px; }
 .s2 .social-links { background: #fff; float: left; padding: 20px 0; width: 100%; border-top: 1px solid rgba(0,0,0,0.08); }
 .s2 .social-links li { margin: 0 auto; padding: 4px 0; width: 100%; position: relative; }
 .s2 .social-links li:before { content:""; height: 1px; background: rgba(0,0,0,0.1); position: absolute; left: 30px; right: 30px; top: 0; }
@@ -728,20 +728,21 @@ body.single .type-list-right { margin-left: 0; margin-top: 30px; }
 /*  header : search
 /* ------------------------------------ */
 .toggle-search { background: #edf0f5; outline: none; border-radius: 10px; margin: 20px 10px; border: 0; padding: 20px 0; width: 50px; color: #071232; text-align: center; font-size: 20px; line-height: 24px; cursor: pointer; display: block; }
-.toggle-search:hover {  }
+.toggle-search:focus { box-shadow: inset 0 0 20px rgba(0,0,0,0.05); }
 .toggle-search.active { background: #00a389; }
 .toggle-search.active i:before { content: "\f00d"; }
 .search-expand { display: none; background: #e0f4f1; border-radius: 10px; padding: 16px; position: absolute; top: 20px; left: 70px; width: 300px; z-index: 10; }
 .col-2cr .search-expand { left: auto; right: 70px; }
 .search-expand-inner {  }
 .search-expand .themeform input { color: #8191a9; width: 100%; border: 1px solid #00a389; }
-.search-expand .themeform input:focus { color: #071232; border-color: #00a389; }
+.search-expand .themeform input:focus { color: #071232; border-color: #00a389; box-shadow: inset 0 0 20px rgba(0,0,0,0.1); }
 .toggle-search.active { padding-top: 23px; padding-bottom: 22px; }
 .toggle-search.active .svg-icon { fill: #fff; }
 .toggle-search .svg-icon { fill: #071232; margin: 0 auto; }
 .toggle-search #svg-close { display: none; }
 .toggle-search.active #svg-search { display: none; }
-.toggle-search.active #svg-close { display: block; }
+.toggle-search.active #svg-close { display: block; fill: rgba(255,255,255,0.7); }
+.toggle-search:focus #svg-close { fill: #fff; }
 
 
 /* ------------------------------------------------------------------------- *
@@ -791,13 +792,13 @@ body.single .type-list-right { margin-left: 0; margin-top: 30px; }
 
 .nav-menu:not(.mobile) .menu { flex-wrap: wrap; justify-content: flex-start; }
 .nav-menu:not(.mobile) .menu ul.active,
-.nav-menu:not(.mobile) .menu li.hover > ul { overflow: visible; width: 180px; opacity: 1; transform: translateY(0); transition: opacity 0.15s linear, transform 0.15s linear; }
-.nav-menu:not(.mobile) .menu ul .sub-menu { left: 200px; top: 0; }
+.nav-menu:not(.mobile) .menu li.hover > ul { overflow: visible; width: 200px; opacity: 1; transform: translateY(0); transition: opacity 0.15s linear, transform 0.15s linear; }
+.nav-menu:not(.mobile) .menu ul .sub-menu { left: 220px; top: 0; }
 .nav-menu:not(.mobile) .menu { position: relative; }
 .nav-menu:not(.mobile) .menu ul { font-size: 15px; opacity: 0; padding: 10px 0; position: absolute; top: calc(100% + 20px); transition: opacity 0.15s linear, transform 0.15s linear, right 0s 0.15s; transform: translateY(6px); z-index: 3; }
 .nav-menu:not(.mobile) .menu ul li { position: relative; }
 .nav-menu:not(.mobile) .menu ul a { display: block; padding: 9px 20px; transition: background-color 0.15s linear; width: 100%; }
-.nav-menu:not(.mobile) .menu li.menu-item-has-children.focus > ul {	min-width: 180px; max-width: 180px; max-height: 300vh; overflow: visible; opacity: 1; transform: translateY(0); transition: opacity 0.15s linear, transform 0.15s linear; }
+.nav-menu:not(.mobile) .menu li.menu-item-has-children.focus > ul {	min-width: 200px; max-width: 200px; max-height: 300vh; overflow: visible; opacity: 1; transform: translateY(0); transition: opacity 0.15s linear, transform 0.15s linear; }
 .nav-menu:not(.mobile) .menu li.menu-item-has-children.focus > ul:focus-within { opacity: 1!important; }
 .nav-menu:not(.mobile) .menu li ul.sub-menu:not(.active) { opacity: 0; }
 .nav-menu:not(.mobile) .menu li.hover ul.sub-menu:not(.active) { opacity: 1; }
@@ -832,6 +833,12 @@ body.single .type-list-right { margin-left: 0; margin-top: 30px; }
 .nav-menu.mobile ul ul li a { padding: 12px 0 12px 40px; }
 .nav-menu.mobile ul ul ul li a { padding: 12px 0 12px 60px; }
 .nav-menu.mobile ul button { margin: 10px 0; padding: 0 20px; }
+
+/* menu mobile fix */
+.nav-menu.mobile > div > ul.menu,
+.nav-menu.mobile.toggled > div > ul.menu ul.sub-menu { visibility: hidden; transition: all 0.3s ease; }
+.nav-menu.mobile.toggled > div > ul.menu,
+.nav-menu.mobile.toggled > div > ul.menu ul.sub-menu.active { visibility: visible; }
 
 /* menu styling */
 .nav-menu a { color: #fff; }
