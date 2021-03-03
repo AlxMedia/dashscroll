@@ -81,6 +81,9 @@ Content images
 
 == Changelog ==
 
+= 1.0.2 - 2021-03-03 =
+* Fixed: javascript error if search button is disabled
+
 = 1.0.1 - 2021-03-02 =
 * Fixed: mobile menu tabbing will enter in the menu even when it's closed
 * Fixed: add styles to focus states of menu and search
