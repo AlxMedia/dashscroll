@@ -81,6 +81,10 @@ Content images
 
 == Changelog ==
 
+= 1.0.3 - 2021-03-16 =
+* Fixed: visible focus states on mobile menu
+* Fixed: more clear focus state style on search button
+
 = 1.0.2 - 2021-03-03 =
 * Fixed: javascript error if search button is disabled
 

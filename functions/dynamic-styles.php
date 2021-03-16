@@ -156,6 +156,9 @@ type-list-title a:hover,
 
 .nav-menu .svg-icon,
 .nav-menu.mobile button.active .svg-icon { fill:'.esc_attr( get_theme_mod('color-1') ).'; }
+
+.nav-menu.mobile button:focus,
+.menu-toggle:focus { box-shadow: inset 0 0px 2px '.esc_attr( get_theme_mod('color-1') ).'; }
 				'."\n";
 			}
 			// secondary color
