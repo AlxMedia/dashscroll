@@ -81,6 +81,9 @@ Content images
 
 == Changelog ==
 
+= 1.0.4 - 2021-04-08 =
+* Fixed: avatar image and avatar author link
+
 = 1.0.3 - 2021-03-16 =
 * Fixed: visible focus states on mobile menu
 * Fixed: more clear focus state style on search button

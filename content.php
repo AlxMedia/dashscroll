@@ -4,8 +4,8 @@
 
 	<div class="type-list-left">
 		<div class="type-list-avatar">
-			<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>">
-				<?php echo get_avatar(get_the_author_meta('user_email'),'48'); ?>
+			<a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>">
+				<?php echo get_avatar( get_the_author_meta( 'ID' ), '48' ); ?>
 			</a>
 		</div>
 	</div>
