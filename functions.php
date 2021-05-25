@@ -92,8 +92,10 @@ add_action( 'after_setup_theme', 'dashscroll_setup' );
 
 /*  Custom navigation
 /* ------------------------------------ */
-add_action( 'wp', function() {
+if ( ! class_exists( '\Dashscroll\Nav' ) ) {
 	require_once 'functions/nav.php';
+}
+add_action( 'wp', function() {
 	$nav = new \Dashscroll\Nav();
 	$nav->enqueue(
 		[
