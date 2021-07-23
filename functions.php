@@ -69,6 +69,9 @@ if ( ! function_exists( 'dashscroll_setup' ) ) {
 		// Enable support for selective refresh of widgets in customizer
 		add_theme_support( 'customize-selective-refresh-widgets' );
 		
+		// Disable support for widgets block editor
+		remove_theme_support( 'widgets-block-editor' );
+		
 		// Thumbnail sizes
 		add_image_size( 'dashscroll-small', 200, 200, true );
 		add_image_size( 'dashscroll-medium', 520, 293, true );
