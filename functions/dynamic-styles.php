@@ -113,7 +113,7 @@ body.single .content-inner > article { max-width: '.esc_attr( get_theme_mod('art
 .themeform label .required,
 .entry a,
 .s2 .social-links .social-tooltip:hover,
-type-list-title a:hover,
+.type-list-title a:hover,
 .type-list-more,
 .type-list-meta li a:hover,
 .nav-menu:not(.mobile) a,
